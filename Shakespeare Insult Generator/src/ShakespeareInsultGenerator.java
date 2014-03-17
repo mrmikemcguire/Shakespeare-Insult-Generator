@@ -2,8 +2,9 @@ import java.util.Random;
 
 public class ShakespeareInsultGenerator
 	{
-	static int locationOfInsultPartOne, locationOfInsultPartTwo, 
-				locationOfInsultPartThree;
+	static int locationOfInsultPartOne = 999;
+	static int locationOfInsultPartTwo = 999; 
+	static int locationOfInsultPartThree = 999;
 	static String insultPartOne, insultPartTwo, insultPartThree;
 	
 	public static void main(String[] args)
@@ -60,8 +61,8 @@ public class ShakespeareInsultGenerator
 				"yeasty",	"weather-bitten",	"wagtail"};
 		
 		Random randomNumber = new Random();
-
-		for (int i = 0; i < 30; i++)
+		while (locationOfInsultPartOne == 999 || locationOfInsultPartTwo == 999 
+				|| locationOfInsultPartThree == 999)
 			{
 			int feederRoll = randomNumber.nextInt(mergedInsultList.length);
 
